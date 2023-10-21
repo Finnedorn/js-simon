@@ -5,20 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
   <title>Funzioni</title>
 </head>
 
 <body>
   <div id="app" class="container">
-        <h1>
-            Simon Says
+        <h1 class="py-3">
+          Simon Says
         </h1>
-        <div id="guess" class="d-none"></div>
-        <div>
-            <label for="exampleFormControlInput1" class="form-label py-2">Ricordi i numeri visualizzati?</label>
-            <input type="text" class="form-control" id="numbers" placeholder="" value="" name="numbers">
+        <!--gioca-->
+        <button id="play" class="btn btn-primary my-3">Gioca</button>
+        <!--div che mostra i numeri della lista per tot secondi-->
+        <div id="guess"></div>
+        <!--div che contiene il form, si apre dopo lo scadere del tempo-->
+        <div id="yourTurn" class="d-none">
+          <label for="exampleFormControlInput1" class="form-label py-2">Ricordi i numeri visualizzati? inseriscili uno ad uno qui di seguito</label>
+          <!--form dove inserire i numeri-->
+          <div class="d-flex">
+            <!--num01-->
+            <input type="text" class="form-control me-2 butnum" id="num01" placeholder="" value="" name="">
+            <!--num02-->
+            <input type="text" class="form-control me-2 butnum" id="num02" placeholder="" value="" name="">
+            <!--num03-->
+            <input type="text" class="form-control me-2 butnum" id="num03" placeholder="" value="" name="">
+            <!--num04-->
+            <input type="text" class="form-control me-2 butnum" id="num04" placeholder="" value="" name="">
+            <!--num05-->
+            <input type="text" class="form-control me-2 butnum" id="num05" placeholder="" value="" name="">
+          </div>
+          <!--pulsante di verifica-->
+          <button id="analyze" class="btn btn-primary my-3">Verifica</button>
         </div>
-        <button id="analyze" class="btn btn-primary">Verifica</button>
+        <!--risultato-->
         <div id="result" class="d-none"></div>
   </div>
   <script src="js/script.js" type="text/javascript"></script>
